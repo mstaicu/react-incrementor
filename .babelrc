@@ -1,0 +1,10 @@
+{
+  "presets": ["env", "react"],
+  "env": {
+    "test": {
+      "plugins": ["istanbul"],
+      "sourceMaps": "inline"
+    }
+  },
+  "plugins": ["transform-class-properties", "transform-object-rest-spread"]
+}

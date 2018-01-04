@@ -1,0 +1,63 @@
+{
+  "name": "react-incrementor",
+  "version": "0.0.0-semantically-released",
+  "description": "Component for building flexible incrementor components",
+  "main": "dist/index.js",
+  "files": ["dist"],
+  "keywords": ["react", "incrementor", "accesibility"],
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "prop-types": "^15.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-eslint": "8.0.3",
+    "babel-plugin-istanbul": "4.1.4",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "codecov": "2.2.0",
+    "commitizen": "2.9.6",
+    "cross-env": "5.0.1",
+    "cz-conventional-changelog": "2.0.0",
+    "enzyme": "3.2.0",
+    "enzyme-adapter-react-16": "1.1.0",
+    "enzyme-to-json": "3.2.2",
+    "eslint": "4.1.1",
+    "eslint-config-airbnb-base": "11.2.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-react": "7.5.1",
+    "jest": "21.2.1",
+    "nyc": "11.3.0",
+    "prop-types": "15.6.0",
+    "raf": "3.4.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "rimraf": "2.6.1",
+    "semantic-release": "6.3.6",
+    "validate-commit-msg": "2.12.2"
+  },
+  "scripts": {
+    "cm": "git-cz",
+    "commitmsg": "validate-commit-msg",
+    "prebuild": "rimraf dist",
+    "build": "babel --copy-files --out-dir dist --ignore *.test.js src",
+    "lint": "eslint src",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "cross-env BABEL_ENV=test nyc jest",
+    "validate": "npm-run-all --parallel lint test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mstaicu/react-incrementor.git"
+  },
+  "author": "Mircea Staicu <mstaicu@yahoo.com>",
+  "license": "MIT"
+}
