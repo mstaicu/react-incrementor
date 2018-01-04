@@ -9,9 +9,7 @@
 [![downloads][downloads-badge]][npmcharts]
 [![version][version-badge]][package]
 [![MIT License][license-badge]][license]
-
 [![PRs Welcome][prs-badge]][prs]
-
 [![size][size-badge]][unpkg-dist]
 [![gzip size][gzip-badge]][unpkg-dist]
 
