@@ -1,0 +1,19 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+branches:
+  only:
+    - master
+notifications:
+  email: false
+before_script:
+  - npm prune
+before_install:
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
+script:
+  - npm run validate
+after_success:
+  - npm run build
+  - npm run release
+  - npm run report-coverage

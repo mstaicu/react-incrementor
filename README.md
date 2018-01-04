@@ -1,19 +1,12 @@
-<div align="center">
-  <h1>✨react-incrementor🎄</h1>
-</div>
-
-<p align="center" style="font-size: 1.2rem;">Component to build simple, flexible, and accessible incrementor components</p>
+# ✨react-incrementor🎄
 
 [![Build Status][build-badge]][build]
 [![Code Coverage][coverage-badge]][coverage]
 [![downloads][downloads-badge]][npmcharts]
-[![version][version-badge]][package]
+[![PRs Welcome][prs-badge]][prs]
 [![MIT License][license-badge]][license]
 
-[![PRs Welcome][prs-badge]][prs]
-
-[![size][size-badge]][unpkg-dist]
-[![gzip size][gzip-badge]][unpkg-dist]
+Component to build simple, flexible, and accessible incrementor components
 
 ## The problem
 
@@ -34,13 +27,12 @@ renders nothing and simply encapsulates the logic of a incrementor component.
   * [value](#value)
   * [onChange](#onchange)
   * [render](#render)
-* [Examples](#examples)
 * [Inspiration](#inspiration)
 * [LICENSE](#license)
 
 ## Installation
 
-This module is distributed via [npm][npm] which is bundled with [node][node] and
+This module is distributed via `npm`, which is bundled with `node`, and
 should be installed as one of your project's `dependencies`:
 
 ```
@@ -93,14 +85,6 @@ calls the `render` function and renders that.
 
 The default `value` state.
 
-### onChange
-
-> `function(value: number)` | optional
-
-Called at interaction with the incrementor
-
-* `value`: The new value after increment / decrement
-
 ### value
 
 > `number` | **control prop**
@@ -108,6 +92,12 @@ Called at interaction with the incrementor
 react-incrementor manages its own state internally and calls your `onChange`
 handler whenever the `value` state changes. Pass the `value` state as a prop
 and that state becomes controlled. It is your responsibility to keep the `value` updated by re-rendering the component.
+
+### onChange
+
+> `function(value: number)` | optional
+
+Called at interaction with the incrementor
 
 ### render
 
@@ -118,7 +108,7 @@ This is called with an object that exposes the public API of this component.
 The function is passed as the render prop:
 `<Incrementor render={(value) => {/* awesome code */}} />`
 
-<!-- This table was generated via http://www.tablesgenerator.com/markdown_tables -->
+<!-- This table generated via http://www.tablesgenerator.com/markdown_tables -->
 
 | property              | category    | type                      | description                                                                                                  |
 | --------------------- | ----------- | ------------------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -133,3 +123,14 @@ This was build as a learning exercise for the `controlled prop pattern` and `ren
 ## LICENSE
 
 MIT
+
+[build-badge]: https://img.shields.io/travis/mstaicu/react-incrementor.svg?style=flat-square
+[build]: https://travis-ci.org/mstaicu/react-incrementor
+[coverage-badge]: https://img.shields.io/codecov/c/github/mstaicu/react-incrementor.svg?style=flat-square
+[coverage]: https://codecov.io/github/mstaicu/react-incrementor
+[downloads-badge]: https://img.shields.io/npm/dm/react-incrementor.svg?style=flat-square
+[npmcharts]: http://npmcharts.com/compare/react-incrementor
+[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
+[prs]: http://makeapullrequest.com
+[license-badge]: https://img.shields.io/npm/l/react-incrementor.svg?style=flat-square
+[license]: https://github.com/mstaicu/react-incrementor/blob/master/LICENSE
