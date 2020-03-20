@@ -8,7 +8,7 @@ pipeline {
 
   // Required
   stages {
-    stage("install deps") {
+    stage("install dependencies") {
       steps {
         // Here goes the script
         // sh 'npm install'
